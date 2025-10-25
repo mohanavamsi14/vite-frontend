@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs "NodeJS" // Optional - if Node.js is configured in Jenkins
-    }
-
     environment {
         BUILD_DIR = "dist"
     }
