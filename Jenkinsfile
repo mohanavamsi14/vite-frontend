@@ -15,13 +15,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
         stage('Build Project') {
             steps {
-                sh 'npm run build'
+                bat 'npm run build'
             }
         }
 
@@ -33,7 +33,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'npx serve -s dist -l 5000 &'
+                bat 'npx serve -s dist -l 5000'
                 echo "Frontend deployed on port 5000"
             }
         }
